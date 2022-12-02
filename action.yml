@@ -3,5 +3,5 @@ author: 'Eduardo Ellery'
 description: 'Advent of Code 2022'
 
 runs:
-  using: 'node16'
+  using: 'node17'
   main: 'dist/index.js'

@@ -15,10 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js 16.x
+      - name: Use Node.js 17.x
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 17.x
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
@@ -28,8 +28,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Run my action
-        uses: ./
-        with:
-          name: 'This Dot Labs'
-          ghToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Test
+        run: npm test
+
