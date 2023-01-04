@@ -1,7 +1,7 @@
 import { part1, part2 } from "../src/aoc/day01";
 import fs from 'fs';
 
-function generateEntries(input: any) {
+function generateEntries(input: string) {
     return input.split('\n\n').map((entry: string) => entry.split('\n').map(Number)) as Array<number[]>;
 }
 
