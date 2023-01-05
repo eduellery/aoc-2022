@@ -1,4 +1,4 @@
-import {part1, part2} from "../aoc/day01";
+import {part1, part2} from "../src/aoc/day01";
 import fs from 'fs';
 
 function generateEntries(input: string) {
