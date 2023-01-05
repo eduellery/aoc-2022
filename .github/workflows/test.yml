@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '19.x'
       - run: yarn
-      - run: yarn lint
+      - run: yarn eslint src test
   jest:
     runs-on: ubuntu-latest
     name: Run tests
