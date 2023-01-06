@@ -1,7 +1,0 @@
-name: 'AoC 2022'
-author: 'Eduardo Ellery'
-description: 'Advent of Code 2022'
-
-runs:
-  using: 'node17'
-  main: 'dist/index.js'
