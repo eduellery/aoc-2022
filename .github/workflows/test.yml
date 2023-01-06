@@ -1,6 +1,4 @@
 name: AoC 2022
-author: 'Eduardo Ellery'
-description: 'Advent of Code 2022'
 
 on:
   push:
