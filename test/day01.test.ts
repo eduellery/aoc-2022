@@ -15,7 +15,7 @@ describe("Day 01", () => {
             expect(result).toEqual(24000);
         });
 
-        it("Input", () => {
+        it("Solve", () => {
             const result = part1(input);
             expect(result).toEqual(71502);
         });
