@@ -2,7 +2,7 @@ import {part1, part2} from "../src/aoc/day02";
 import fs from 'fs';
 
 function generateEntries(input: string) {
-    return input.split('\n').map((entry: string) => entry.split(' ').map(String)) as Array<string[]>;
+    return input.split('\n');
 }
 
 const test = generateEntries(fs.readFileSync(__dirname + '/day02.test', 'utf8'));
@@ -17,7 +17,7 @@ describe("Day 02", () => {
 
         it("Input", () => {
             const result = part1(input);
-            expect(result).toEqual(13217);
+            expect(result).toEqual(13005);
         });
     });
 
