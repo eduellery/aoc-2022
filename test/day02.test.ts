@@ -1,5 +1,5 @@
 import { part1, part2 } from "../src/aoc/day02";
-import { generateEntries } from "./util";
+import { generateEntries } from "../src/aoc/util";
 import fs from 'fs';
 
 const test = generateEntries(fs.readFileSync(__dirname + '/day02.test', 'utf8'));

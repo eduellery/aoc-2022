@@ -1,5 +1,5 @@
 import { part1, part2 } from "../src/aoc/day01";
-import { generateEntriesAsNumberArray } from "./util";
+import { generateEntriesAsNumberArray } from "../src/aoc/util";
 import fs from 'fs';
 
 const test = generateEntriesAsNumberArray(fs.readFileSync(__dirname + '/day01.test', 'utf8'));
