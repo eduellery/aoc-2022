@@ -1,9 +1,6 @@
 import { part1, part2 } from "../src/aoc/day02";
+import { generateEntries } from "./util";
 import fs from 'fs';
-
-function generateEntries(input: string) {
-    return input.split('\n');
-}
 
 const test = generateEntries(fs.readFileSync(__dirname + '/day02.test', 'utf8'));
 const input = generateEntries(fs.readFileSync(__dirname + '/day02.in', 'utf8'));
