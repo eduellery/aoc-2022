@@ -1,4 +1,4 @@
-import { part1 } from "../src/aoc/day03";
+import { part1, part2 } from "../src/aoc/day03";
 import { generateEntries } from "../src/aoc/util";
 import fs from 'fs';
 
@@ -15,6 +15,18 @@ describe("Day 03", () => {
         it("Input", () => {
             const result = part1(input);
             expect(result).toEqual(7863);
+        });
+    });
+
+    describe("Part 2", () => {
+        it("Sample", () => {
+            const result = part2(test);
+            expect(result).toEqual(70);
+        });
+
+        it("Input", () => {
+            const result = part2(input);
+            expect(result).toEqual(2488);
         });
     });
 });
