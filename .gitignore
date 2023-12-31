@@ -6,4 +6,5 @@ coverage
 *.tsbuildinfo
 
 .DS_Store
-
+.aocsession
+*.in
