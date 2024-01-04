@@ -4,6 +4,8 @@ import fs from 'fs';
 
 const test = generateEntries(fs.readFileSync(__dirname + '/day04.test', 'utf8'));
 const input = generateEntries(fs.readFileSync(__dirname + '/day04.in', 'utf8'));
+const localTest = fs.existsSync(__dirname + '/day04.in')
+const itif = (condition: boolean) => condition ? it : it.skip;
 
 describe("Day 04", () => {
     describe("Part 1", () => {
@@ -12,7 +14,7 @@ describe("Day 04", () => {
             expect(result).toEqual(2);
         });
 
-        it("Input", () => {
+        itif(localTest)("Input", () => {
             const result = part1(input);
             expect(result).toEqual(530);
         });
@@ -24,7 +26,7 @@ describe("Day 04", () => {
             expect(result).toEqual(4);
         });
 
-        it("Input", () => {
+        itif(localTest)("Input", () => {
             const result = part2(input);
             expect(result).toEqual(903);
         });

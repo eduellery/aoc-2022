@@ -4,6 +4,8 @@ import fs from 'fs';
 
 const test = generateEntriesAsNumberArray(fs.readFileSync(__dirname + '/day01.test', 'utf8'));
 const input = generateEntriesAsNumberArray(fs.readFileSync(__dirname + '/day01.in', 'utf8'));
+const localTest = fs.existsSync(__dirname + '/day01.in')
+const itif = (condition: boolean) => condition ? it : it.skip;
 
 describe("Day 01", () => {
     describe("Part 1", () => {
@@ -12,7 +14,7 @@ describe("Day 01", () => {
             expect(result).toEqual(24000);
         });
 
-        it("Solve", () => {
+        itif(localTest)("Solve", () => {
             const result = part1(input);
             expect(result).toEqual(71502);
         });
@@ -24,7 +26,7 @@ describe("Day 01", () => {
             expect(result).toEqual(45000);
         });
 
-        it("Solve", () => {
+        itif(localTest)("Solve", () => {
             const result = part2(input);
             expect(result).toEqual(208191);
         })
