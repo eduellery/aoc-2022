@@ -3,8 +3,8 @@ import { generateEntries } from "../src/aoc/util";
 import fs from 'fs';
 
 const test = generateEntries(fs.readFileSync(__dirname + '/day03.test', 'utf8'));
-const input = generateEntries(fs.readFileSync(__dirname + '/day03.in', 'utf8'));
-const localTest = fs.existsSync(__dirname + '/day03.in')
+const localTest = fs.existsSync(__dirname + '/day03.in');
+const input = localTest ? generateEntries(fs.readFileSync(__dirname + '/day03.in', 'utf8')) : [];
 const itif = (condition: boolean) => condition ? it : it.skip;
 
 describe("Day 03", () => {

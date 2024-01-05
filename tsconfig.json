@@ -1,20 +1,25 @@
 {
-    "compilerOptions": {
-      "composite": true,
-      "target": "es2019",
-      "module": "commonjs",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "rootDir": "src",
-      "outDir": "dist",
-      "lib": ["esnext"]
-    },
-    "references": [
-      {
-        "path": "./tsconfig.build.json"
-      }
-    ],
-    "exclude": ["node_modules"]
-  }
+  "compilerOptions": {
+    "composite": true,
+    "target": "es2019",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "lib": [
+      "esnext"
+    ]
+  },
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    }
+  ],
+  "exclude": [
+    "node_modules",
+    "./test"
+  ],
+}

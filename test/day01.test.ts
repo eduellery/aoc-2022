@@ -3,8 +3,8 @@ import { generateEntriesAsNumberArray } from "../src/aoc/util";
 import fs from 'fs';
 
 const test = generateEntriesAsNumberArray(fs.readFileSync(__dirname + '/day01.test', 'utf8'));
-const input = generateEntriesAsNumberArray(fs.readFileSync(__dirname + '/day01.in', 'utf8'));
-const localTest = fs.existsSync(__dirname + '/day01.in')
+const localTest = fs.existsSync(__dirname + '/day01.in');
+const input = localTest ? generateEntriesAsNumberArray(fs.readFileSync(__dirname + '/day01.in', 'utf8')) : [];
 const itif = (condition: boolean) => condition ? it : it.skip;
 
 describe("Day 01", () => {
